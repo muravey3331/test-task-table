@@ -12,7 +12,8 @@ li{
   outline: none;
 }
 table{
-  /*width: 100%;*/
+  width: 100%;
+  max-width: 600px;
   border-collapse: collapse;
 
 }
@@ -35,6 +36,9 @@ th{
   width: 18px;
   background: no-repeat center;
   background-size: contain;
+}
+.sort:hover{
+  cursor: pointer;
 }
 .default{
   background-image: url(images/sort-arrows.svg);

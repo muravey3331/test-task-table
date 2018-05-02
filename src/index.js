@@ -5,12 +5,14 @@ import './index.css';
 import Table from './components/Table';
 
 const initialState = {
-    headers: ['name', 'last name', 'age'],
+    headers: ['name', 'last name', 'age', 'city'],
     data: [
-        ['Thomas', 'Cruse', 25],
-        ['Jack', 'Nick', 17],
-        ['Anton', 'Shevchuk', 30],
-        ['Max', 'Durov', 20]
+        ['Thomas', 'Cruse', 32, 'Moscow'],
+        ['Jack', 'Nick', 17, 'Kyiv'],
+        ['Anton', 'Shevchuk', 32, 'London'],
+        ['Max', 'Durov', 23, 'New York'],
+        ['Anton', 'Durov', 36, 'Paris'],
+        ['Max', 'Logachov', 21, 'Moscow']
     ]
 };
 
