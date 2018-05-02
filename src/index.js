@@ -7,10 +7,12 @@ import Table from './components/Table';
 const initialState = {
     headers: ['name', 'last name', 'age', 'city'],
     data: [
-        ['Thomas', 'Cruse', 25, 'London'],
-        ['Jack', 'Nick', 17, 'New York'],
-        ['Anton', 'Shevchuk', 30, 'Moscow'],
-        ['Max', 'Durov', 20, 'Kyiv']
+        ['Thomas', 'Cruse', 32, 'Moscow'],
+        ['Jack', 'Nick', 17, 'Kyiv'],
+        ['Anton', 'Shevchuk', 32, 'London'],
+        ['Max', 'Durov', 23, 'New York'],
+        ['Anton', 'Durov', 36, 'Paris'],
+        ['Max', 'Logachov', 21, 'Moscow']
     ]
 };
 
