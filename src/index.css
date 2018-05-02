@@ -26,6 +26,10 @@ th,td{
 th{
   text-transform: capitalize;
   background: #eeeeee;
+  text-align: left;
+}
+th:hover{
+  cursor: pointer;
 }
 
 .sort{
@@ -37,9 +41,7 @@ th{
   background: no-repeat center;
   background-size: contain;
 }
-.sort:hover{
-  cursor: pointer;
-}
+
 .default{
   background-image: url(images/sort-arrows.svg);
   background-size: 80%;
@@ -49,4 +51,7 @@ th{
 }
 .desc{
   background-image: url(images/reverse.svg);
+}
+.select-wrapper{
+  margin-bottom: 14px;
 }

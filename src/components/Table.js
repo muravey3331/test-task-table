@@ -16,14 +16,17 @@ class Table extends Component {
         this.setSortParams = this.setSortParams.bind(this);
         this.handleSelectChange = this.handleSelectChange.bind(this);
         this.headers = this.props.data.headers;
-        this.data = this.props.data.data
+        this.data = this.props.data.data;
+        this.widths = this.props.widths;
     }
-    handleSelectChange(e){
+
+    handleSelectChange(e) {
         this.setState({
             secondSortedCol: e.target.value
         });
         this.sortTable();
     }
+
     setSortParams(index) {
         if (!this.state.sortType || this.state.sortType === 'desc' || this.state.sortedCol !== index) {
             this.setState(
@@ -63,17 +66,22 @@ class Table extends Component {
 
 
         return (
-            <div><span>additional field:</span>
-                <select name="" defaultValue={1} onChange={this.handleSelectChange}>
-                    {this.headers.map((item, index)=>{
-                        return (<option key={index} value={index} disabled={index === this.state.sortedCol}>{item}</option>)
+            <div>
+                <div className="select-wrapper">
+                    <span>Second sort field:</span>
+                    <select name="" defaultValue={1} onChange={this.handleSelectChange}>
+                    {this.headers.map((item, index) => {
+                        return (
+                            <option key={index} value={index} disabled={index === this.state.sortedCol}>{item}</option>)
                     })}
-                </select>
+                    </select>
+                </div>
                 <table>
                     <TableHeaders headers={this.headers}
                                   setSortParams={this.setSortParams}
                                   sortedCol={this.state.sortedCol}
-                                  sortType={this.state.sortType}/>
+                                  sortType={this.state.sortType}
+                                  widths={this.widths}/>
                     <TableBody data={this.data}/>
                 </table>
             </div>

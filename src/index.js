@@ -15,9 +15,11 @@ const initialState = {
         ['Max', 'Logachov', 21, 'Moscow']
     ]
 };
+const widths = [25, 25, 20, 25];
 
 ReactDOM.render(
-        <Table data={initialState}/>,
+    <Table data={initialState}
+           widths={widths}/>,
     document.getElementById('root'));
 
 
