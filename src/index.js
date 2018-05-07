@@ -15,11 +15,12 @@ const initialState = {
         ['Max', 'Logachov', 21, 'Moscow']
     ]
 };
-const widths = [25, 25, 20, 25];
+const widths = [25, 25, 15, 25];
 
 ReactDOM.render(
     <Table data={initialState}
-           widths={widths}/>,
+           widths={widths}
+           resizable={true}/>,
     document.getElementById('root'));
 
 

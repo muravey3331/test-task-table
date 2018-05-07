@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableHeaders = ({setSortParams, headers, sortedCol, sortType, widths}) => {
+const TableHeaders = ({setSortParams, headers, sortedCol, sortType, widths, resizable}) => {
     return (
         <thead>
         <tr>
@@ -8,7 +8,7 @@ const TableHeaders = ({setSortParams, headers, sortedCol, sortType, widths}) => 
             {headers.map((col, index) => (
                 <th key={index}
                     onClick={() => setSortParams(index)}
-                    width={widths ? `${widths[index]}%` : 'auto'}>
+                    width={widths && resizable ? `${widths[index]}%` : 'auto'}>
                     {col}
                     <div className={index === sortedCol ? `sort ${sortType}` : 'sort default'}/>
                 </th>

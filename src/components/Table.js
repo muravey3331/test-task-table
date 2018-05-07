@@ -18,6 +18,7 @@ class Table extends Component {
         this.headers = this.props.data.headers;
         this.data = this.props.data.data;
         this.widths = this.props.widths;
+        this.resizable = this.props.resizable
     }
 
     handleSelectChange(e) {
@@ -81,7 +82,8 @@ class Table extends Component {
                                   setSortParams={this.setSortParams}
                                   sortedCol={this.state.sortedCol}
                                   sortType={this.state.sortType}
-                                  widths={this.widths}/>
+                                  widths={this.widths}
+                                  resizable={this.resizable}/>
                     <TableBody data={this.data}/>
                 </table>
             </div>
